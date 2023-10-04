@@ -165,7 +165,7 @@ int main(int argc, char *argv[]) {
 
 			int sockfd = open_connection(HOST_ADDR, PORT, AF_INET, SOCK_STREAM, 0);
 
-			message = compute_get_request(HOST_ADDR, LIB_PATH, NULL, jwt, NULL, 0); //nuj daca trb cookie
+			message = compute_get_request(HOST_ADDR, LIB_PATH, NULL, jwt, NULL, 0);
 
 			send_to_server(sockfd, message);
 			response = receive_from_server(sockfd);
